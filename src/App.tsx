@@ -1522,9 +1522,31 @@ const Conferences = ({ t, lang }) => {
   const upcomingEvents = t.conferences.events.filter(e => e.isUpcoming);
   const pastEvents = t.conferences.events.filter(e => !e.isUpcoming);
 
+  const bgImages = [
+    'assets/acml2025_1.webp',
+    'assets/acml2025_2.webp',
+    'assets/acml2025_3.webp',
+    'assets/acml2025_4.webp',
+    'assets/acml2025_5.webp',
+    'assets/acml2025_6.webp'
+  ];
+
   return (
-    <section id="conferences" className="pt-32 pb-20 bg-slate-50/30 min-h-screen">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="conferences" className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-slate-50">
+      <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3 gap-1 opacity-30">
+        {bgImages.map((img, idx) => (
+          <div key={idx} className="w-full h-full relative">
+            <img 
+              src={getImageUrl(img)} 
+              alt={`Background ${idx + 1}`}
+              className="absolute inset-0 w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="absolute inset-0 bg-slate-50/80 backdrop-blur-[2px]" />
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">{t.conferences.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-6">{t.conferences.title}</h2>
