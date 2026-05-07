@@ -1518,8 +1518,7 @@ const ConferenceItem = ({ event, t, lang }: { event: any, t: any, lang: any, key
   );
 };
 
-const ConferenceBackgroundSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const ConferenceBackgroundGallery = () => {
   const bgImages = [
     '/assets/acml2025_1.webp',
     '/assets/acml2025_2.webp',
@@ -1529,30 +1528,18 @@ const ConferenceBackgroundSlider = () => {
     '/assets/acml2025_6.webp',
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % bgImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-      <div className="absolute inset-0 bg-slate-900" />
-      {bgImages.map((src, index) => (
-        <motion.img
-          key={src}
-          src={getImageUrl(src)}
-          initial={false}
-          animate={{ 
-            opacity: index === currentIndex ? 0.35 : 0, 
-            scale: index === currentIndex ? 1 : 1.05 
-          }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      ))}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50/95 via-slate-50/80 to-slate-50/95 backdrop-blur-[2px]" />
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-indigo-50/80">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 p-2 md:p-4 w-full h-full opacity-40">
+        {bgImages.map((src) => (
+          <img
+            key={src}
+            src={getImageUrl(src)}
+            className="w-full h-full object-cover rounded-2xl shadow-sm"
+          />
+        ))}
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-100/90 via-indigo-50/80 to-indigo-100/90 backdrop-blur-[2px]" />
     </div>
   );
 };
@@ -1562,8 +1549,8 @@ const Conferences = ({ t, lang }) => {
   const pastEvents = t.conferences.events.filter(e => !e.isUpcoming);
 
   return (
-    <section id="conferences" className="pt-32 pb-20 relative min-h-screen overflow-hidden">
-      <ConferenceBackgroundSlider />
+    <section id="conferences" className="pt-32 pb-20 relative min-h-screen overflow-hidden bg-indigo-50/30">
+      <ConferenceBackgroundGallery />
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">{t.conferences.badge}</span>
