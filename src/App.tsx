@@ -1556,8 +1556,6 @@ const ConferenceBackgroundSlider = () => {
         {/* 柔化相片頂部邊緣 */}
         <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-slate-50 to-transparent z-10" />
       </div>
-      {/* 全域毛玻璃與半透明遮罩，使前景文字清晰 */}
-      <div className="absolute inset-0 bg-slate-50/70 backdrop-blur-[3px] z-20" />
     </div>
   );
 };
