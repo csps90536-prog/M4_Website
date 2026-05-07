@@ -1386,7 +1386,7 @@ const ConferenceItem = ({ event, t, lang }: { event: any, t: any, lang: any, key
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md mb-4">
+    <div className="bg-white/70 rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md mb-4">
       <div
         className="p-6 flex flex-col md:flex-row gap-8 items-center cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
@@ -1546,15 +1546,12 @@ const ConferenceBackgroundSlider = () => {
             src={getImageUrl(src)}
             initial={false}
             animate={{ 
-              opacity: index === currentIndex ? 1 : 0, 
-              scale: index === currentIndex ? 1 : 1.05 
+              opacity: index === currentIndex ? 1 : 0
             }}
             transition={{ duration: 2, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full object-cover"
           />
         ))}
-        {/* 柔化相片頂部邊緣 */}
-        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-slate-50 to-transparent z-10" />
       </div>
     </div>
   );
