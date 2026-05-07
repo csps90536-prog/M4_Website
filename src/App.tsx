@@ -1521,12 +1521,12 @@ const ConferenceItem = ({ event, t, lang }: { event: any, t: any, lang: any, key
 const ConferenceBackgroundSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const bgImages = [
-    '/assets/acml2025_1.webp',
-    '/assets/acml2025_2.webp',
-    '/assets/acml2025_3.webp',
-    '/assets/acml2025_4.webp',
-    '/assets/acml2025_5.webp',
-    '/assets/acml2025_6.webp',
+    'assets/acml2025_1.webp',
+    'assets/acml2025_2.webp',
+    'assets/acml2025_3.webp',
+    'assets/acml2025_4.webp',
+    'assets/acml2025_5.webp',
+    'assets/acml2025_6.webp',
   ];
 
   useEffect(() => {
@@ -1537,9 +1537,9 @@ const ConferenceBackgroundSlider = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-slate-50">
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       {/* 讓相片從標題下方開始顯示，保留上方空白背景 */}
-      <div className="absolute top-[250px] inset-x-0 bottom-0">
+      <div className="absolute top-[250px] inset-x-0 bottom-0 flex items-start justify-center">
         {bgImages.map((src, index) => (
           <motion.img
             key={src}
@@ -1549,7 +1549,7 @@ const ConferenceBackgroundSlider = () => {
               opacity: index === currentIndex ? 0.7 : 0
             }}
             transition={{ duration: 2, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-contain object-top"
           />
         ))}
       </div>
