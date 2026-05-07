@@ -1518,7 +1518,8 @@ const ConferenceItem = ({ event, t, lang }: { event: any, t: any, lang: any, key
   );
 };
 
-const ConferenceBackgroundGallery = () => {
+const ConferenceBackgroundSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const bgImages = [
     '/assets/acml2025_1.webp',
     '/assets/acml2025_2.webp',
@@ -1528,19 +1529,35 @@ const ConferenceBackgroundGallery = () => {
     '/assets/acml2025_6.webp',
   ];
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % bgImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-      <div className="absolute inset-0 bg-slate-900" />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 p-2 md:p-4 w-full h-full opacity-70">
-        {bgImages.map((src) => (
-          <img
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-slate-50">
+      {/* 讓相片從標題下方開始顯示，保留上方空白背景 */}
+      <div className="absolute top-[250px] inset-x-0 bottom-0">
+        {bgImages.map((src, index) => (
+          <motion.img
             key={src}
             src={getImageUrl(src)}
-            className="w-full h-full object-cover rounded-2xl shadow-sm"
+            initial={false}
+            animate={{ 
+              opacity: index === currentIndex ? 1 : 0, 
+              scale: index === currentIndex ? 1 : 1.05 
+            }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full object-cover"
           />
         ))}
+        {/* 柔化相片頂部邊緣 */}
+        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-slate-50 to-transparent z-10" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50/95 via-slate-50/80 to-slate-50/95 backdrop-blur-[2px]" />
+      {/* 全域毛玻璃與半透明遮罩，使前景文字清晰 */}
+      <div className="absolute inset-0 bg-slate-50/70 backdrop-blur-[3px] z-20" />
     </div>
   );
 };
@@ -1551,20 +1568,12 @@ const Conferences = ({ t, lang }) => {
 
   return (
     <section id="conferences" className="pt-32 pb-20 relative min-h-screen overflow-hidden">
-      <ConferenceBackgroundGallery />
+      <ConferenceBackgroundSlider />
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">{t.conferences.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-6">{t.conferences.title}</h2>
           <div className="w-12 h-1 bg-blue-600 mx-auto mt-6 rounded-full" />
-        </div>
-
-        {/* Future Main Visual Placeholder */}
-        <div className="w-full aspect-video md:aspect-[21/9] bg-white/50 backdrop-blur-sm rounded-3xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center mb-16 shadow-inner">
-           <Presentation size={32} className="text-slate-400 mb-3" />
-           <span className="text-slate-500 font-bold tracking-widest">
-             {lang === 'zh' ? '主視覺圖預留區塊' : 'Main Visual Placeholder'}
-           </span>
         </div>
 
         {/* Upcoming Section */}
