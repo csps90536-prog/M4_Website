@@ -1518,13 +1518,53 @@ const ConferenceItem = ({ event, t, lang }: { event: any, t: any, lang: any, key
   );
 };
 
+const ConferenceBackgroundSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const bgImages = [
+    '/assets/acml2025_1.webp',
+    '/assets/acml2025_2.webp',
+    '/assets/acml2025_3.webp',
+    '/assets/acml2025_4.webp',
+    '/assets/acml2025_5.webp',
+    '/assets/acml2025_6.webp',
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % bgImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 bg-slate-900" />
+      {bgImages.map((src, index) => (
+        <motion.img
+          key={src}
+          src={getImageUrl(src)}
+          initial={false}
+          animate={{ 
+            opacity: index === currentIndex ? 0.35 : 0, 
+            scale: index === currentIndex ? 1 : 1.05 
+          }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ))}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50/95 via-slate-50/80 to-slate-50/95 backdrop-blur-[2px]" />
+    </div>
+  );
+};
+
 const Conferences = ({ t, lang }) => {
   const upcomingEvents = t.conferences.events.filter(e => e.isUpcoming);
   const pastEvents = t.conferences.events.filter(e => !e.isUpcoming);
 
   return (
-    <section id="conferences" className="pt-32 pb-20 bg-slate-50/30 min-h-screen">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="conferences" className="pt-32 pb-20 relative min-h-screen overflow-hidden">
+      <ConferenceBackgroundSlider />
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">{t.conferences.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-6">{t.conferences.title}</h2>
