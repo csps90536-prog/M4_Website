@@ -1546,10 +1546,10 @@ const ConferenceBackgroundSlider = () => {
             src={getImageUrl(src)}
             initial={false}
             animate={{ 
-              opacity: index === currentIndex ? 1 : 0
+              opacity: index === currentIndex ? 0.8 : 0
             }}
             transition={{ duration: 2, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-top"
           />
         ))}
       </div>
