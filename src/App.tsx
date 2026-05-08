@@ -143,6 +143,14 @@ const translations = {
       title: '最新消息',
       items: [
         {
+          date: '2026/05/25',
+          time: '12:30 - 13:30',
+          location: '長庚大學管理大樓11樓-AI講堂',
+          title: '【學術演講】Macrophages, Chronic Diseases and Aging',
+          desc: '講者：Prof. Jianzhu Chen 現任麻省理工學院生物學系教授',
+          link: 'https://www.cgu.edu.tw/coic/Subject/Detail/77751?nodeId=16993'
+        },
+        {
           date: '2026/05/05',
           time: ' 14:00 - 16:00',
           location: '長庚大學管理大樓11樓-AI講堂',
@@ -382,6 +390,14 @@ const translations = {
       badge: 'Activity News',
       title: 'Latest Updates',
       items: [
+        {
+          date: 'YYYY/MM/DD',
+          time: 'HH:MM - HH:MM',
+          location: 'Please enter location',
+          title: '[Activity Type] Please enter title',
+          desc: 'Please enter description',
+          link: '#'
+        },
         {
           date: '2026/05/05',
           time: ' 14:00 - 16:00',
@@ -1315,7 +1331,7 @@ const Science = ({ t, lang }) => {
 
         <div className="flex flex-col gap-8 max-w-5xl mx-auto">
           {t.science.items.length > 0 ? (
-            t.science.items.map((item, i) => (
+            [...t.science.items].sort((a, b) => b.date.localeCompare(a.date)).map((item, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
