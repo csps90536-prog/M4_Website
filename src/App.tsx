@@ -282,7 +282,7 @@ const translations = {
       title: '相關單位',
     },
     brand: {
-      name: 'M4計畫',
+      name: '智慧醫療影像',
     },
     footer: {
       desc: '引領未來的創新計畫，致力於透過技術與合作創造社會價值。我們相信每一個小小的改變，都能匯聚成推動世界的巨大力量。',
@@ -530,7 +530,7 @@ const translations = {
       title: 'Related Organizations',
     },
     brand: {
-      name: 'M4 Project',
+      name: '智慧醫療影像',
     },
     footer: {
       desc: 'Leading the future innovation project, committed to creating social value through technology and collaboration.',
