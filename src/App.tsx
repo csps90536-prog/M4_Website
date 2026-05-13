@@ -62,7 +62,7 @@ const translations = {
       join: '計畫詳情',
     },
     hero: {
-      badge: '2026 年度重點計畫',
+      badge: 'AICoE主題研究計畫',
       title: '多階段模組化醫療視覺基礎模型',
       subtitle: 'Multistage Modular Medical Models',
       desc: '我們致力於透過創新的技術與跨領域的合作，解決當前最迫切的挑戰，為社會創造長遠的價值與影響力。',
