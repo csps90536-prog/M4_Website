@@ -522,11 +522,11 @@ const Hero = ({ t, lang }) => {
   return (
     <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden min-h-[80vh] flex flex-col justify-center">
       {/* Background Image - 請將主視覺圖片命名為 main-visual.webp 並放置於 public/assets/ 資料夾下 */}
-      <div className="absolute inset-0 w-full h-full -z-20">
+      <div className="fixed top-[80px] left-0 right-0 bottom-0 -z-20 pointer-events-none flex items-center justify-center">
         <img 
           src={getImageUrl("/assets/main-visual.webp")} 
           alt="Main Visual Background" 
-          className="w-full h-full object-contain object-center"
+          className="w-full h-full object-cover object-top"
           referrerPolicy="no-referrer"
           onError={(e) => {
             // Placeholder fallback if image is not found
@@ -557,7 +557,7 @@ const Hero = ({ t, lang }) => {
               {t.hero.subtitle}
             </span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-900 font-bold leading-relaxed bg-white/60 p-4 rounded-2xl backdrop-blur-sm border border-white/60 shadow-sm">
+          <p className="max-w-6xl text-lg md:text-xl text-slate-900 font-bold leading-relaxed bg-white/60 p-6 rounded-2xl backdrop-blur-sm border border-white/60 shadow-sm">
             {t.hero.desc}
           </p>
         </motion.div>
