@@ -568,7 +568,7 @@ const Hero = ({ t, lang }) => {
 
 const ActivityNewsPreview = ({ t, lang }) => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <div>
@@ -707,7 +707,7 @@ const ActivityNewsPreview = ({ t, lang }) => {
 
 const InfographicCards = ({ t }) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {t.infographic.cards.map((card, i) => (
