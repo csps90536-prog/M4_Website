@@ -31,6 +31,7 @@ import {
   MapPin
 } from 'lucide-react';
 import teamData from './team.json';
+import enData from './en.json';
 
 // Import all images from src/assets
 const images = import.meta.glob('./assets/*.{png,jpg,jpeg,svg,webp,avif}', { eager: true, query: '?url', import: 'default' });
@@ -62,10 +63,10 @@ const translations = {
       join: '計畫詳情',
     },
     hero: {
-      badge: '2026 年度重點計畫',
+      badge: 'AICoE主題研究計畫',
       title: '多階段模組化醫療視覺基礎模型',
       subtitle: 'Multistage Modular Medical Models',
-      desc: '我們致力於透過創新的技術與跨領域的合作，解決當前最迫切的挑戰，為社會創造長遠的價值與影響力。',
+      desc: 'M4 計畫透過 AI 視覺流水線推進智慧醫療。模型從自然影像學習視覺特徵，經多模態醫學影像建立基礎，最後在醫師導引下微調為專科模型。本計畫在確保數據隱私下，開發臨床輔助工具以落實精準醫療。',
       cta1: '了解更多計畫細節',
       cta2: '徵聘資訊',
     },
@@ -122,17 +123,17 @@ const translations = {
       url: 'https://www.cgu.edu.tw/aic/Subject?nodeId=12884',
       jobs: [
         {
-          date: '2026/04/28',
+          date: '2026/05/10',
           title: '【徵聘訊息】長庚大學人工智慧研究中心 徵國科會計畫學/碩士級專任助理各一名',
           url: 'https://www.cgu.edu.tw/aic/Subject/Detail/77537?nodeId=12884'
         },
         {
-          date: '2025/02/03',
+          date: '2026/04/15',
           title: '【徵聘訊息】長庚大學「人工智慧研究中心」誠徵研究員/副研究員/助理研究員二名',
           url: 'https://www.cgu.edu.tw/aic/Subject/Detail/43283?nodeId=12884'
         },
         {
-          date: '2025/06/01',
+          date: '2026/05/01',
           title: '【徵聘訊息】 人工智慧研究中心誠徵博士級專任計畫助理',
           url: 'https://www.cgu.edu.tw/aic/Subject/Detail/43284?nodeId=12884'
         }
@@ -165,6 +166,14 @@ const translations = {
           title: '【學術演講】ZotDance - an AI-powered open platform for Dancer Training and Beyond',
           desc: '講者：加州大學爾灣分校電機工程與計算機學系 Quoc-Viet Dang 教學副教授',
           link: 'https://www.cgu.edu.tw/aic/Subject/Detail/77265?nodeId=7144'
+        },
+        {
+          date: '2026/05/25',
+          time: '12:30 - 13:30',
+          location: '長庚大學管理大樓11樓-AI講堂',
+          title: '【學術演講】Macrophages, Chronic Diseases and Aging',
+          desc: '講者：Prof. Jianzhu Chen 現任麻省理工學院生物學系教授',
+          link: 'https://www.cgu.edu.tw/coic/Subject/Detail/77751?nodeId=16993'
         }
       ],
     },
@@ -174,7 +183,7 @@ const translations = {
       desc: '探索全球醫療人工智慧領域的最新研究成果與技術趨勢。',
       items: [
         {
-          date: '2025/05/15',
+          date: '2026/05/08',
           title: 'AI醫療市場規模爆發式成長 5大應用範圍成未來發展重點',
           author: '記者彭夢竺／台北報導',
           source: '科技島',
@@ -182,7 +191,7 @@ const translations = {
           url: 'https://www.technice.com.tw/issues/ai/172553/'
         },
         {
-          date: '2024/09/12',
+          date: '2026/04/22',
           title: 'AI病理診斷：從技術到臨床的革命性突破',
           author: '口述／雲象科技創辦人暨執行長葉肇元　整理／賴宛靖',
           source: '工研院產業學院',
@@ -190,7 +199,7 @@ const translations = {
           url: 'https://college.itri.org.tw/Info/InfoData/d749e033-cc83-402d-a0e9-4f46db89af5f'
         },
         {
-          date: '2024/03/15',
+          date: '2026/03/15',
           title: '智慧醫材結合AI應用新趨勢',
           author: '撰文／羅倩宜',
           source: '工業技術與資訊月刊',
@@ -198,7 +207,7 @@ const translations = {
           url: 'https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=18_content&SiteID=1&MmmID=1036452026061075714&MGID=1253016311517010576'
         },
         {
-          date: '2024/01/19',
+          date: '2026/02/10',
           title: '生成式 AI 正如何在全球各醫療場域，提升醫護工作效率與照護品質？',
           author: '黃怡婷 科技大觀園特約編輯',
           source: '國家科學及技術委員會科技大觀園',
@@ -206,7 +215,7 @@ const translations = {
           url: 'https://scitechvista.nat.gov.tw/Article/C000003/detail?ID=bfae4816-f4ee-4a5f-9d57-1fe964c65ad5'
         },
         {
-          date: '2023/08/04',
+          date: '2026/01/05',
           title: 'AI幫助乳房癌症攝影篩檢，助醫師工作量減半',
           author: 'Hannah',
           source: 'AI郵報',
@@ -223,7 +232,7 @@ const translations = {
       officialSite: '前往會議官方網站',
       events: [
         {
-          date: '待定',
+          date: '2026/06/20',
           title: '2026 醫療人工智慧論壇',
           subtitle: '2026 Medical AI Forum',
           loc: '桃園',
@@ -232,11 +241,11 @@ const translations = {
           isUpcoming: true
         },
         {
-          date: '2025/12/9-2025/12/12',
-          title: '2025 ACML',
-          subtitle: 'The 17th Asian Conference on Machine Learning',
+          date: '2026/06/09-2026/06/12',
+          title: '2026 ACML',
+          subtitle: 'The 18th Asian Conference on Machine Learning',
           loc: '台北 華南銀行國際會議中心',
-          desc: '第 17 屆亞洲機器學習會議 (ACML 2025) 旨在提供一個國際論壇，供研究人員討論機器學習領域的最新進展。',
+          desc: '第 17 屆亞洲機器學習會議 (ACML 2026) 旨在提供一個國際論壇，供研究人員討論機器學習領域的最新進展。',
           url: 'https://sites.google.com/view/acml-2025-medical-ai-forum/home',
           img: 'assets/ACML2025.webp',
           isUpcoming: false,
@@ -274,10 +283,9 @@ const translations = {
       title: '相關單位',
     },
     brand: {
-      name: 'M4計畫',
+      name: '智慧醫療影像',
     },
     footer: {
-      desc: '引領未來的創新計畫，致力於透過技術與合作創造社會價值。我們相信每一個小小的改變，都能匯聚成推動世界的巨大力量。',
       quickLinks: '快速連結',
       legal: '法律資訊',
       p1: '隱私權政策',
@@ -286,250 +294,11 @@ const translations = {
       address: '單位位置：長庚大學管理大樓11樓\n　　　　　人工智慧研究中心',
       phone: '聯絡電話：886-3-2118800 ext 3003#53',
       email: '電子信箱：bettysu@cgu.edu.tw',
-      updated: '最後更新時間：2026-04-27',
+      updated: '最後更新時間：2026-05-14',
       externalWarning: '點擊連結後將前往外部網站',
     },
   },
-  en: {
-    nav: {
-      about: 'Project Detail',
-      team: 'Team',
-      recruitment: 'Recruitment',
-      news: 'Activity News',
-      science: 'AI News',
-      conferences: 'Conferences',
-      privacy: 'Privacy',
-      join: 'Project Details',
-    },
-    hero: {
-      badge: '2026 Key Project',
-      title: 'Multistage Modular Medical Models',
-      subtitle: 'A Modular Foundation Model Framework for Medical Imaging',
-      desc: 'We are committed to solving the most pressing challenges through innovative technology and cross-disciplinary collaboration, creating long-term value and impact for society.',
-      cta1: 'Learn More Details',
-      cta2: 'Recruitment',
-    },
-    infographic: {
-      badge: 'Highlights',
-      title: 'Technical Highlights',
-      desc: 'Through the M4 MEDCLAW platform, we aim to break down the barriers of medical AI development, enabling hospitals to independently create precision medical foundation models.',
-      image: 'assets/Technical Highlights.webp', // 請將此處替換為您的英文版圖片檔名
-      cards: [
-        { title: 'Technical Highlights', desc: 'Powerful lesion feature extraction and automated fine-tuning without expert intervention.' },
-        { title: 'M4 MEDCLAW', desc: 'Agent-assisted platform for autonomous medical imaging foundation model fine-tuning.' },
-        { title: 'Industrial Application', desc: 'Autonomous generation of proprietary models, clinical decision support, and economic efficiency.' }
-      ]
-    },
-    about: {
-      badge: 'Project Detail',
-      title: 'Project Overview | M4 Modular Medical Foundation Models',
-      desc: 'This project centers on "Beyond Scaling Law, with Data Efficiency and Trustworthiness at the Core," aiming to build a Modular Medical Foundation Model (M4) framework for medical imaging to address key challenges like data scarcity, high labeling costs, and privacy constraints in real clinical settings.\n\nTraditional AI development relies on massive data and model scaling, which is often impractical in medicine. This project adopts a "Strategy over Scale" mindset, combining Self-Supervised Learning, Multi-stage Transfer Learning, and Task-specific Fine-Tuning to enable AI to progressively learn and establish clinically valuable medical semantic understanding with minimal expert-labeled data.',
-      sections: [
-        {
-          id: 'background',
-          title: 'I. Background & Challenges',
-          content: '**• Scarcity**\nMedical labeled data is scarce and expensive; stable training and generalization are needed under limited labels.\n**• Domain Shift**\nLarge differences across hospitals/equipment cause inconsistent model performance due to varying data distributions.\n**• Adaptation Challenges**\nExtended pre-training on distilled large models may damage existing general representations, making adaptation difficult.'
-        },
-        {
-          id: 'goals',
-          title: 'II. Project Goals & Scope',
-          content: '**• Extended Pre-training Workflow**\nEstablish workflows suitable for distilled models to improve domain adaptation and reduce degradation risks.\n**• Few-shot Training**\nDevelop few-shot training methods to enhance efficiency under limited labels, using intermediate relevant fine-tuning to improve results.\n**• Cross-hospital Validation**\nEstablish cross-hospital validation mechanisms, introducing doctor-in-the-loop to support clinical review and feedback iteration.'
-        },
-        {
-          id: 'innovation',
-          title: 'III. Core Innovations',
-          content: '**• DAP Medical Domain Adaptation**\nBased on large natural image models, use distilled extended pre-training for medical domain enhancement, effectively transferring general image representations to multiple medical modalities.\n**• Few-shot & Data Efficiency**\nIn scenarios with limited labeled data, adopt intermediate fine-tuning and high-efficiency adaptation strategies to achieve stable and generalized performance with fewer labels.\n**• Feature Fusion & Global Optimization**\nFuse complementary features from MAE Pixio and DINO, connecting all training modules for global optimization to enhance cross-modal consistency and clinical usability.'
-        },
-        {
-          id: 'process',
-          title: 'IV. Technical Process',
-          content: '**1. Self-Supervised Domain Adaptation Pre-training (DAP)**\nPixio (MAE-style) × DINO (v3) | Three modalities: Fundus, Endoscopy, Echo\n\n**2. Intermediate Supervised Fine-tuning**\nIntermediate task fine-tuning for MAE Pixio and DINO respectively.\n\n**3. Feature Fusion**\nIntegrate MAE Pixio × DINO into a single fused model.\n\n**4. End-to-End Optimization**\nGlobal model optimization combined with Doctor-in-the-loop validation feedback.'
-        },
-        {
-          id: 'milestones',
-          title: 'V. Milestones',
-          content: 'We have set a clear roadmap, from infrastructure construction to final cross-hospital clinical trials, ensuring the project achieves its expected impact step by step.'
-        },
-      ],
-      exp: 'Years Experience',
-      externalLink: 'View Detailed Project Description',
-    },
-    recruitment: {
-      badge: 'Recruitment',
-      title: 'Join Our Team',
-      desc: 'Please click the link below to check the latest recruitment information.',
-      linkText: 'View More Recruitment Info',
-      url: 'https://www.cgu.edu.tw/aic/Subject?nodeId=12884',
-      jobs: [
-        {
-          date: '2026/01/20',
-          title: 'Recruitment: Full-time Research Assistant (1 position)',
-          url: 'https://www.cgu.edu.tw/aic/Subject/Detail/77350?nodeId=12884'
-        },
-        {
-          date: '2025/02/03',
-          title: 'Recruitment: Research Fellow/Associate Research Fellow/Assistant Research Fellow (2 positions)',
-          url: 'https://www.cgu.edu.tw/aic/Subject/Detail/43283?nodeId=12884'
-        },
-        {
-          date: '2025/06/01',
-          title: 'Recruitment: Postdoctoral Project Assistant',
-          url: 'https://www.cgu.edu.tw/aic/Subject/Detail/43284?nodeId=12884'
-        }
-      ],
-    },
-    news: {
-      badge: 'Activity News',
-      title: 'Latest Updates',
-      items: [
-        {
-          date: '2026/05/05',
-          time: ' 14:00 - 16:00',
-          location: 'AI Lecture Hall, 11F Management Building, Chang Gung University',
-          title: '[Academic Talk] Digital Transformation: Revolutionizing Clinical Trials with Big Data and AI',
-          desc: 'Speaker: Dr. Shih-Jui Lin, PhD in Biomedical Informatics, Stanford University, USA',
-          link: 'https://www.cgu.edu.tw/aic/Subject/Detail/76975?nodeId=7144'
-        },
-        {
-          date: '2026/05/12',
-          time: '15:00 - 17:00',
-          location: 'AI Lecture Hall, 11F Management Building, Chang Gung University',
-          title: "【學術演講】Hiding a Swarm's Leader from RL Agent and Human. AI Safety in the Information and Physical Space",
-          desc: 'Speakers: Prof. Michael Lewis (University of Pittsburgh) / Prof. Katia Sycara (Carnegie Mellon University)',
-          link: 'https://www.cgu.edu.tw/aic/Subject/Detail/76978?nodeId=7144'
-        },
-        {
-          date: '2026/05/15',
-          time: '12:10 - 13:30',
-          location: 'Future Classroom, 9F Management Building, Chang Gung University',
-          title: '【學術演講】ZotDance - an AI-powered open platform for Dancer Training and Beyond',
-          desc: 'Speaker: Assoc. Prof. Quoc-Viet Dang, Department of Electrical Engineering and Computer Science, UC Irvine',
-          link: 'https://www.cgu.edu.tw/aic/Subject/Detail/77265?nodeId=7144'
-        }
-      ],
-    },
-    science: {
-      badge: 'AI News',
-      title: 'Research, Implementation, and Future of AI in Healthcare',
-      desc: 'Exploring the latest research results and technical trends in the field of global medical AI.',
-      items: [
-        {
-          date: '2025/01/10',
-          title: '2025 Medical AI Trends: From Assisted Diagnosis to Precision Medicine',
-          author: 'Sci-Tech Vista Editorial Department',
-          source: 'Sci-Tech Vista',
-          desc: 'Exploring the core development directions of medical AI in 2025, including the application of multimodal large models in clinical decision-making.',
-          url: 'https://scitechvista.nat.gov.tw/Article/C000003/detail?ID=2025-medical-ai-trends'
-        },
-        {
-          date: '2024/09/12',
-          title: 'AI Pathology Diagnosis: A Revolutionary Breakthrough from Technology to Clinic',
-          author: 'Narrated by Chao-Yuan Yeh, Founder & CEO of aetherAI; Edited by Wan-Jing Lai',
-          source: 'ITRI College',
-          desc: 'Using AI to set a new milestone in pathological diagnosis as the second pair of eyes for doctors.',
-          url: 'https://college.itri.org.tw/Info/InfoData/d749e033-cc83-402d-a0e9-4f46db89af5f'
-        },
-        {
-          date: '2024/03/15',
-          title: 'New Trends in Smart Medical Devices with AI Applications',
-          author: 'Written by Chien-Yi Lo',
-          source: 'Industrial Technology & Information Monthly',
-          desc: 'High-end medical care moves from hospitals to point-of-care near patients. Generative AI begins to sprout in medical applications.',
-          url: 'https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=18_content&SiteID=1&MmmID=1036452026061075714&MGID=1253016311517010576'
-        },
-        {
-          date: '2024/01/19',
-          title: 'How Generative AI Improves Healthcare Efficiency and Quality?',
-          author: 'Yi-Ting Huang, Sci-Tech Vista Special Editor',
-          source: 'Sci-Tech Vista',
-          desc: 'Generative AI is improving medical work efficiency. Important prerequisites for applying generative AI in the medical field.',
-          url: 'https://scitechvista.nat.gov.tw/Article/C000003/detail?ID=bfae4816-f4ee-4a5f-9d57-1fe964c65ad5'
-        },
-        {
-          date: '2023/08/04',
-          title: 'AI Helps Breast Cancer Screening, Halving Doctors\' Workload',
-          author: 'Hannah',
-          source: 'AI Post',
-          desc: 'Improving screening efficiency and solving the shortage of radiologists.',
-          url: 'https://reurl.cc/mpMkXG'
-        }
-      ]
-    },
-    conferences: {
-      badge: 'Conferences',
-      title: 'Academic Events & Highlights',
-      upcoming: 'Upcoming',
-      past: 'Past Events',
-      officialSite: 'Go to Official Conference Website',
-      events: [
-        {
-          date: '2026/12/11',
-          title: '2026 Medical AI Forum',
-          subtitle: '2026 Medical AI Forum',
-          loc: 'Taoyuan',
-          desc: 'This forum will explore the latest applications and future trends of artificial intelligence in the medical field, bringing together experts from the medical and technology sectors. (Webpage under construction)',
-          img: 'https://picsum.photos/seed/medical-ai-2026/800/600',
-          isUpcoming: true
-        },
-        {
-          date: '2025/12/9-2025/12/12',
-          title: '2025 ACML',
-          subtitle: 'The 17th Asian Conference on Machine Learning',
-          loc: 'HNBK International Convention Center, Taipei',
-          desc: 'The 17th Asian Conference on Machine Learning (ACML 2025) aims to provide an international forum for researchers to discuss the latest advances in machine learning.',
-          url: 'https://sites.google.com/view/acml-2025-medical-ai-forum/home',
-          img: 'assets/ACML2025.webp',
-          isUpcoming: false,
-          gallery: [
-            'assets/acml2025_1.webp', // Please replace with your image filename 1
-            'assets/acml2025_2.webp', // Please replace with your image filename 2
-            'assets/acml2025_3.webp', // Please replace with your image filename 3
-            'assets/acml2025_4.webp', // Please replace with your image filename 4
-            'assets/acml2025_5.webp', // Please replace with your image filename 5
-            'assets/acml2025_6.webp'  // Please replace with your image filename 6
-          ]
-        },
-      ],
-    },
-    privacy: {
-      badge: 'Privacy Policy',
-      title: 'Your Privacy Matters',
-      desc: 'We are committed to protecting your personal data. We only collect information when necessary.',
-      fullPolicy: 'Chang Gung University M4 Project Website Privacy Policy\nWelcome to the official website of the M4 Project of the Artificial Intelligence Research Center, Chang Gung University (hereinafter referred to as "this website"). This project is jointly executed by relevant research units of the Artificial Intelligence Research Center, Chang Gung University (hereinafter referred to as "the project team"). To protect your privacy and help you understand how this website collects, processes, and utilizes your personal data, please read the following policy description carefully:\n\nI. Scope of Policy Application\nThis policy applies to the personal data involved when you browse this website, use online services of this website, or participate in online activities related to this project. This policy does not apply to third-party websites linked to this website, nor does it apply to personnel not employed or managed by the project team.\n\nII. Methods and Purposes of Personal Data Collection\nWebsite Browsing Records: When you browse this website, the server automatically generates relevant logs (Log), including your IP address, usage time, browser type, and click records. These data are mainly used for website traffic analysis and system improvement of this project and will not be compared with specific individuals.\n\nContact and Consultation: If you contact the project through website forms or emails, we will collect your name, email, and communication content, which will only be used to respond to your inquiries or provide project-related information.\n\nProject-Specific Data Processing: * The medical images, clinical data, or AI model training data involved in the M4 project strictly comply with the regulations of the Institutional Review Board (IRB).\n\nAll research data and images displayed on this website have undergone de-identification (De-identification) processing to ensure that specific natural persons cannot be identified.\n\nIII. Data Protection and Security Measures\nThis website host is equipped with firewalls, anti-virus systems, and various information security protection measures to ensure the security of your data and the research data of this project.\n\nOnly core researchers authorized by this project can access relevant data. All personnel have signed confidentiality agreements and will bear relevant legal and administrative responsibilities in case of violations.\n\nIV. Regulations on Sharing Data with Third Parties\nThe project team will never provide, exchange, or sell your personal data to other individuals, groups, or private enterprises. Except for the following cases:\n\nWith your written consent or active authorization.\n\nCooperating with investigations conducted by judicial or regulatory agencies according to law.\n\nFor academic research purposes, and the data has been processed to the extent that specific parties cannot be identified (complying with the academic exception provisions of Articles 6 and 15 of the Personal Data Protection Act).\n\nV. Technical Application of Cookies\nThis website uses Cookie technology to provide a more convenient browsing experience. You can refuse access to Cookies through browser settings, but this may cause some functions of the website to not work properly.\n\nVI. Rights of Project Participants\nAccording to the Taiwan "Personal Data Protection Act", you have the rights to inquire, review, request copies, supplement, correct, stop collection, processing, utilization, or request deletion of your personal data collected for this project. If you have relevant needs, please contact us through the official contact channels of this project.\n\nVII. Revision of Privacy Policy\nIn response to changes in laws or project development needs, this privacy policy will be revised from time to time. The revised terms will be announced immediately on this website without individual notice.\n\nVIII. Contact Us\nIf you have any questions about the privacy policy or data processing of the M4 Project, please contact:\n\nProject Name: Chang Gung University Artificial Intelligence Research Center M4 Project (M4 Project)\n\nExecuting Unit: Chang Gung University Artificial Intelligence Research Center\n\nOfficial Website: https://m4.cgu.edu.tw/'
-    },
-    timeline: {
-      badge: 'Progress',
-      title: 'Project Milestones',
-      steps: [
-        { date: 'Year 1', title: 'Complete Base Pre-trained Models and Testing for Three Modalities', desc: 'Publicly release model benchmark results' },
-        { date: 'Year 2', title: 'Build Doctor-in-the-loop Prototype System', desc: 'Combine with cross-hospital pilot testing, complete compliance documentation and pre-clinical validation preparation reports' },
-      ],
-    },
-    team: {
-      badge: 'Team',
-      title: 'Core Execution Team',
-      roles: { lead: 'Project Lead', tech: 'Tech Director', ops: 'Ops Manager', community: 'Community' },
-    },
-    partners: {
-      title: 'Related Organizations',
-    },
-    brand: {
-      name: 'M4 Project',
-    },
-    footer: {
-      desc: 'Leading the future innovation project, committed to creating social value through technology and collaboration.',
-      quickLinks: 'Quick Links',
-      legal: 'Legal',
-      p1: 'Privacy Policy',
-      rights: '© 2026 Artificial Intelligence Research Center, Chang Gung University. All rights reserved.',
-      contact: 'Contact Info',
-      address: 'Address: 11F, Management Building, Chang Gung University,\n         AI Research Center',
-      phone: 'Phone: 886-3-2118800 ext 3003#53',
-      email: 'Email: bettysu@cgu.edu.tw',
-      updated: 'Last Updated: 2026-04-10',
-      externalWarning: 'Clicking the link will take you to an external website',
-    },
-  },
+  en: enData,
 };
 
 // --- Components ---
@@ -750,30 +519,45 @@ const Navbar = ({ lang, setLang, t }: { lang: string, setLang: any, t: any }) =>
 
 const Hero = ({ t, lang }) => {
   return (
-    <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-      {/* Background Accents */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-50 rounded-full blur-3xl opacity-60" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-indigo-50 rounded-full blur-3xl opacity-60" />
+    <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden min-h-[80vh] flex flex-col justify-center">
+      {/* Background Image - 請將主視覺圖片命名為 main-visual.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 right-0 bottom-0 -z-20 pointer-events-none flex items-center justify-center">
+        <img 
+          src={getImageUrl("/assets/main-visual.webp")} 
+          alt="Main Visual Background" 
+          className="w-full h-full object-cover object-top"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            // Placeholder fallback if image is not found
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/hero-fallback/1920/1080";
+          }}
+        />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      {/* Background Accents (Keep for subtle color pop) */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 mix-blend-multiply pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-100 rounded-full blur-3xl opacity-40" />
+        <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-indigo-100 rounded-full blur-3xl opacity-40" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="bg-white/85 p-8 md:p-12 rounded-3xl backdrop-blur-md border border-white shadow-2xl inline-block max-w-5xl mx-auto"
         >
-          <span className="inline-block py-2 px-6 rounded-full bg-indigo-50 text-indigo-600 text-base md:text-xl font-bold tracking-widest uppercase mb-4">
+          <span className="inline-block py-2 px-6 rounded-full bg-white shadow-sm border border-indigo-50 text-indigo-600 text-base md:text-xl font-bold tracking-widest mb-6">
             {t.hero.badge}
           </span>
-          <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight mb-8 leading-tight">
-            <span className="block mb-6">{t.hero.title}</span>
-            <span className="inline-block text-xl sm:text-2xl md:text-3xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 py-4 px-2 leading-relaxed decoration-clone">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+            <span className="block mb-4">{t.hero.title}</span>
+            <span className="inline-block text-xl sm:text-2xl md:text-3xl lg:text-3xl text-blue-800 leading-relaxed">
               {t.hero.subtitle}
             </span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-700 font-bold leading-relaxed">
             {t.hero.desc}
           </p>
         </motion.div>
@@ -784,31 +568,30 @@ const Hero = ({ t, lang }) => {
 
 const ActivityNewsPreview = ({ t, lang }) => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6 bg-white/85 p-6 md:px-10 md:py-8 rounded-3xl backdrop-blur-md border border-white shadow-sm"
+        >
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block py-1 px-4 rounded-full bg-blue-50 text-blue-600 text-sm font-bold tracking-wider uppercase mb-4">
-                {t.news.badge}
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">
-                {t.news.title}
-              </h2>
-            </motion.div>
+            <span className="inline-block py-1 px-4 rounded-full bg-blue-50 text-blue-600 text-sm font-bold tracking-wider uppercase mb-2 md:mb-4">
+              {t.news.badge}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900">
+              {t.news.title}
+            </h2>
           </div>
           <Link 
             to="/news" 
-            className="flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all"
+            className="flex items-center gap-2 bg-blue-50 text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-100 hover:gap-3 transition-all"
           >
-            {lang === 'zh' ? '更多訊息' : 'More News'} <ArrowRight size={20} />
+            {lang === 'zh' ? '更多活動' : 'More Activities'} <ArrowRight size={20} />
           </Link>
-        </div>
+        </motion.div>
 
         {t.news.items.length > 0 ? (
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl shadow-blue-50/50 border border-blue-100 overflow-hidden">
@@ -819,7 +602,7 @@ const ActivityNewsPreview = ({ t, lang }) => {
               </div>
               {[...t.news.items]
                 .sort((a, b) => b.date.localeCompare(a.date))
-                .slice(0, 5)
+                .slice(0, 3)
                 .map((item, i) => (
                   <motion.div
                     key={i}
@@ -833,9 +616,9 @@ const ActivityNewsPreview = ({ t, lang }) => {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-8 py-6 grid grid-cols-12 gap-8 hover:bg-blue-50/50 transition-all group items-start"
+                        className="px-6 py-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 hover:bg-blue-50/50 transition-all group items-start"
                       >
-                        <div className="col-span-4 md:col-span-3 flex flex-col gap-2">
+                        <div className="md:col-span-3 flex flex-col gap-1 md:gap-2">
                           <div className="text-slate-900 font-bold text-sm md:text-base whitespace-nowrap">{item.date}</div>
                           {item.time && (
                             <div className="text-slate-500 text-xs flex items-center gap-1.5 font-medium">
@@ -850,7 +633,7 @@ const ActivityNewsPreview = ({ t, lang }) => {
                             </div>
                           )}
                         </div>
-                        <div className="col-span-8 md:col-span-9">
+                        <div className="md:col-span-9">
                           <div className="text-slate-900 font-bold group-hover:text-blue-600 transition-colors text-sm md:text-lg mb-2">
                             <span className="mr-2">{item.title}</span>
                             <div className="inline-flex items-center gap-1 bg-blue-100 text-blue-600 px-2 py-0.5 rounded text-[10px] md:text-xs font-bold whitespace-nowrap align-middle">
@@ -870,9 +653,9 @@ const ActivityNewsPreview = ({ t, lang }) => {
                     ) : (
                       <Link
                         to="/news"
-                        className="px-8 py-6 grid grid-cols-12 gap-8 hover:bg-blue-50/50 transition-all group items-start"
+                        className="px-6 py-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 hover:bg-blue-50/50 transition-all group items-start"
                       >
-                        <div className="col-span-4 md:col-span-3 flex flex-col gap-2">
+                        <div className="md:col-span-3 flex flex-col gap-1 md:gap-2">
                           <div className="text-slate-900 font-bold text-sm md:text-base whitespace-nowrap">{item.date}</div>
                           {item.time && (
                             <div className="text-slate-500 text-xs flex items-center gap-1.5 font-medium">
@@ -887,9 +670,9 @@ const ActivityNewsPreview = ({ t, lang }) => {
                             </div>
                           )}
                         </div>
-                        <div className="col-span-8 md:col-span-9">
+                        <div className="md:col-span-9">
                           <div className="text-slate-900 font-bold group-hover:text-blue-600 flex items-start gap-2 transition-colors text-sm md:text-lg mb-2">
-                            <span className="line-clamp-1">{item.title}</span>
+                            <span className="">{item.title}</span>
                             <ArrowRight size={18} className="shrink-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all mt-1 md:mt-0" />
                           </div>
                           <div className="text-slate-500 text-xs md:text-sm font-medium italic">
@@ -923,7 +706,7 @@ const ActivityNewsPreview = ({ t, lang }) => {
 
 const InfographicCards = ({ t }) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {t.infographic.cards.map((card, i) => (
@@ -1030,10 +813,22 @@ const About = ({ t, lang }) => {
   };
 
   return (
-    <section id="about" className="pt-32 pb-16 bg-slate-50/50 overflow-hidden min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="about" className="pt-32 pb-16 bg-transparent overflow-hidden h-auto">
+      {/* Background Image - 請將計畫內容背景圖片命名為 bg-about.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 -z-20 pointer-events-none p-4 md:p-12 lg:p-16">
+        <img 
+          src={getImageUrl("/assets/bg-about.webp")} 
+          alt="About Background" 
+          className="w-auto h-auto max-w-[80vw] sm:max-w-sm md:max-w-md lg:max-w-lg object-contain object-left-top opacity-90"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/about-bg/1920/1080";
+          }}
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Project Overview */}
-        <div className="text-left w-full mb-8">
+        <div className="text-left w-full mb-8 bg-white/80 p-8 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50">
           <span className="text-indigo-600 font-bold tracking-widest uppercase text-xl">{t.about.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-4 mb-6">{t.about.title}</h2>
           <p className="text-xl text-slate-600 leading-relaxed whitespace-pre-wrap">
@@ -1058,7 +853,7 @@ const About = ({ t, lang }) => {
         </div>
 
         {/* Paginated Content */}
-        <div className="min-h-[400px] relative">
+        <div className="relative">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -1175,9 +970,21 @@ const About = ({ t, lang }) => {
 
 const Recruitment = ({ t, lang }) => {
   return (
-    <section id="recruitment" className="pt-32 pb-20 bg-blue-50/30 min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-10">
+    <section id="recruitment" className="pt-32 pb-20 bg-transparent min-h-screen">
+      {/* Background Image - 請將徵聘資訊背景圖片命名為 bg-recruitment.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 -z-20 pointer-events-none p-4 md:p-12 lg:p-16">
+        <img 
+          src={getImageUrl("/assets/bg-recruitment.webp")} 
+          alt="Recruitment Background" 
+          className="w-auto h-auto max-w-[80vw] sm:max-w-sm md:max-w-md lg:max-w-lg object-contain object-left-top opacity-90"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/recruitment-bg/1920/1080";
+          }}
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-10 bg-white/80 p-8 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50 max-w-3xl mx-auto">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-xl">{t.recruitment.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-4">{t.recruitment.title}</h2>
           <p className="text-lg text-slate-600 mt-4">{t.recruitment.desc}</p>
@@ -1222,9 +1029,21 @@ const Recruitment = ({ t, lang }) => {
 
 const News = ({ t, lang }) => {
   return (
-    <section id="news" className="pt-32 pb-20 bg-slate-50/50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="news" className="pt-32 pb-20 bg-transparent min-h-screen">
+      {/* Background Image - 請將活動訊息背景圖片命名為 bg-news.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 -z-20 pointer-events-none p-4 md:p-12 lg:p-16">
+        <img 
+          src={getImageUrl("/assets/bg-news.webp")} 
+          alt="News Background" 
+          className="w-auto h-auto max-w-[80vw] sm:max-w-sm md:max-w-md lg:max-w-lg object-contain object-left-top opacity-90"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/news-bg/1920/1080";
+          }}
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 bg-white/80 p-8 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50 max-w-3xl mx-auto">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">{t.news.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-6">{t.news.title}</h2>
           <div className="w-12 h-1 bg-blue-600 mx-auto mt-6 rounded-full" />
@@ -1232,7 +1051,7 @@ const News = ({ t, lang }) => {
         
         {t.news.items.length > 0 ? (
           <div className="space-y-8 max-w-4xl mx-auto">
-            {t.news.items.map((item, i) => (
+            {[...t.news.items].sort((a, b) => b.date.localeCompare(a.date)).map((item, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 20 }}
@@ -1304,9 +1123,21 @@ const News = ({ t, lang }) => {
 
 const Science = ({ t, lang }) => {
   return (
-    <section id="science" className="pt-32 pb-20 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="science" className="pt-32 pb-20 bg-transparent min-h-screen">
+      {/* Background Image - 請將AI新知背景圖片命名為 bg-science.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 -z-20 pointer-events-none p-4 md:p-12 lg:p-16">
+        <img 
+          src={getImageUrl("/assets/bg-science.webp")} 
+          alt="Science Background" 
+          className="w-auto h-auto max-w-[80vw] sm:max-w-sm md:max-w-md lg:max-w-lg object-contain object-left-top opacity-90"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/science-bg/1920/1080";
+          }}
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 bg-white/80 p-8 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50 max-w-3xl mx-auto">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">{t.science.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-6">{t.science.title}</h2>
           <p className="text-slate-500 mt-4 max-w-2xl mx-auto">{t.science.desc}</p>
@@ -1315,7 +1146,7 @@ const Science = ({ t, lang }) => {
 
         <div className="flex flex-col gap-8 max-w-5xl mx-auto">
           {t.science.items.length > 0 ? (
-            t.science.items.map((item, i) => (
+            [...t.science.items].sort((a, b) => b.date.localeCompare(a.date)).map((item, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -1386,7 +1217,7 @@ const ConferenceItem = ({ event, t, lang }: { event: any, t: any, lang: any, key
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all hover:shadow-md mb-4">
+    <div className="bg-white/80 rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all hover:shadow-md mb-4">
       <div
         className="p-6 flex flex-col md:flex-row gap-8 items-center cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
@@ -1518,18 +1349,76 @@ const ConferenceItem = ({ event, t, lang }: { event: any, t: any, lang: any, key
   );
 };
 
+const ConferenceMarquee = () => {
+  const bgImages = [
+    'assets/acml2025_1.webp',
+    'assets/acml2025_2.webp',
+    'assets/acml2025_3.webp',
+    'assets/acml2025_4.webp',
+    'assets/acml2025_5.webp',
+    'assets/acml2025_6.webp',
+  ];
+
+  const marqueeImages = [...bgImages, ...bgImages];
+
+  return (
+    <div className="relative w-full overflow-hidden py-12 mb-16 border-y border-slate-100 bg-white opacity-75">
+      <motion.div 
+        className="flex gap-6 w-max"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ 
+          repeat: Infinity, 
+          ease: "linear", 
+          duration: 30 
+        }}
+      >
+        {marqueeImages.map((src, index) => (
+          <div key={index} className="w-72 md:w-96 aspect-video rounded-2xl overflow-hidden shadow-sm shrink-0 border-4 border-white bg-slate-50">
+            <img 
+              src={getImageUrl(src)} 
+              alt={`Conference Moment`} 
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = `https://picsum.photos/seed/conf-${index}/400/300`;
+              }}
+            />
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
 const Conferences = ({ t, lang }) => {
   const upcomingEvents = t.conferences.events.filter(e => e.isUpcoming);
   const pastEvents = t.conferences.events.filter(e => !e.isUpcoming);
 
   return (
-    <section id="conferences" className="pt-32 pb-20 bg-slate-50/30 min-h-screen">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="conferences" className="pt-32 pb-20 relative min-h-screen bg-transparent">
+      {/* Background Image - 請將學術會議背景圖片命名為 bg-conferences.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 -z-20 pointer-events-none p-4 md:p-12 lg:p-16">
+        <img 
+          src={getImageUrl("/assets/bg-conferences.webp")} 
+          alt="Conferences Background" 
+          className="w-auto h-auto max-w-[80vw] sm:max-w-sm md:max-w-md lg:max-w-lg object-contain object-left-top opacity-90"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/conferences-bg/1920/1080";
+          }}
+        />
+      </div>
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-12 bg-white/80 p-8 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50 max-w-3xl mx-auto">
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-4 py-2 rounded-full">{t.conferences.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-6">{t.conferences.title}</h2>
           <div className="w-12 h-1 bg-blue-600 mx-auto mt-6 rounded-full" />
         </div>
+      </div>
+
+      <ConferenceMarquee />
+
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
 
         {/* Upcoming Section */}
         {upcomingEvents.length > 0 && (
@@ -1577,8 +1466,20 @@ const Privacy = ({ t, lang }) => {
   const [showFull, setShowFull] = useState(false);
 
   return (
-    <section id="privacy" className="pt-32 pb-20 bg-slate-50/50 min-h-screen">
-      <div className="max-w-3xl mx-auto px-6 text-center">
+    <section id="privacy" className="pt-32 pb-20 bg-transparent min-h-screen">
+      {/* Background Image - 請將隱私權政策背景圖片命名為 bg-privacy.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 -z-20 pointer-events-none p-4 md:p-12 lg:p-16">
+        <img 
+          src={getImageUrl("/assets/bg-privacy.webp")} 
+          alt="Privacy Background" 
+          className="w-auto h-auto max-w-[80vw] sm:max-w-sm md:max-w-md lg:max-w-lg object-contain object-left-top opacity-90"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/privacy-bg/1920/1080";
+          }}
+        />
+      </div>
+      <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
         <div className="w-20 h-20 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
           <Lock size={40} />
         </div>
@@ -1625,8 +1526,8 @@ const TeamMember = ({ member, lang, t }: any) => {
   const expertise = lang === 'en' ? member.expertiseEn : member.expertise;
 
   return (
-    <div className="flex flex-col items-center text-center group">
-      <div className="w-32 h-32 rounded-full overflow-hidden mb-8 ring-8 ring-slate-50 group-hover:ring-blue-50 transition-all duration-500 shadow-xl">
+    <div className="flex flex-col items-center text-center group bg-white/80 p-6 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50 h-full">
+      <div className="w-32 h-32 rounded-full overflow-hidden mb-8 ring-8 ring-slate-50 group-hover:ring-blue-50 transition-all duration-500 shadow-xl bg-white">
         <img
           src={getImageUrl(member.img)}
           alt={name}
@@ -1683,9 +1584,21 @@ const Team = ({ t, lang }) => {
   const row4 = teamData.slice(11, 12);
 
   return (
-    <section id="team" className="pt-32 pb-20 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="team" className="pt-32 pb-20 bg-transparent min-h-screen">
+      {/* Background Image - 請將團隊介紹背景圖片命名為 bg-team.webp 並放置於 public/assets/ 資料夾下 */}
+      <div className="fixed top-[80px] left-0 -z-20 pointer-events-none p-4 md:p-12 lg:p-16">
+        <img 
+          src={getImageUrl("/assets/bg-team.webp")} 
+          alt="Team Background" 
+          className="w-auto h-auto max-w-[80vw] sm:max-w-sm md:max-w-md lg:max-w-lg object-contain object-left-top opacity-90"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://picsum.photos/seed/team-bg/1920/1080";
+          }}
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 bg-white/80 p-8 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50 max-w-3xl mx-auto">
           <span className="text-blue-700 font-bold tracking-widest uppercase text-xl">{t.team.badge}</span>
           <h2 className="text-4xl font-bold text-slate-900 mt-4">{t.team.title}</h2>
           <div className="w-16 h-1 bg-blue-600 mx-auto mt-6" />
@@ -1730,7 +1643,7 @@ const Team = ({ t, lang }) => {
 const Flowchart = ({ t, lang, src = "/assets/pipeline.webp", title = "", isNested = false }) => {
   const content = (
     <div className={`${isNested ? '' : 'max-w-7xl mx-auto px-6'}`}>
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 bg-white/80 p-8 rounded-3xl backdrop-blur-sm shadow-sm border border-white/50 max-w-3xl mx-auto">
         <span className="text-blue-600 font-bold tracking-widest uppercase text-xl">{lang === 'zh' ? '技術架構' : 'Technical Architecture'}</span>
         <h2 className="text-4xl font-bold text-slate-900 mt-4">{title}</h2>
       </div>
